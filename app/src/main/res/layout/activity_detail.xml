@@ -9,22 +9,526 @@
     >
 
     <!--  Jumbotron Section  -->
+    <RelativeLayout
+        android:id="@+id/jumbotron_section"
+        android:layout_width="match_parent"
+        android:layout_height="350sp"
+        android:background="@drawable/pic_2_big">
+
+        <!--  Navigator  -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="25sp"
+            android:paddingTop="25sp">
+
+            <LinearLayout
+                android:id="@+id/back_btn"
+                android:layout_width="32sp"
+                android:layout_height="32sp"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/white_color"
+                android:padding="5sp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="6sp"
+                    android:src="@drawable/ic_back_2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="32sp"
+                android:layout_height="32sp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/white_color"
+                android:padding="5sp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_love" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:paddingVertical="20sp"
+            android:src="@drawable/indicator" />
+
+    </RelativeLayout>
     <!--  End of Jumbotron Section  -->
 
-    <!--  Info Section  -->
+    <ScrollView
+        android:layout_below="@id/jumbotron_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:fillViewport="true"
+        android:paddingBottom="50sp"
+        android:layout_marginTop="-10sp"
+        >
 
-        <!--  Header Section  -->
-        <!--  End of Header Section  -->
+        <!--  Info Section  -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingHorizontal="15sp"
+            android:paddingTop="25sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_card_big"
+            android:paddingBottom="50sp"
+            >
 
-        <!--  Room Specs Section  -->
-        <!--  End of Room Specs Section  -->
+            <!--  Header Section  -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <!--  Happy Tenant Section  -->
-        <!--  End of Happy Tenant Section  -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
 
-    <!--  End of Info Section  -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginBottom="-10sp"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:text="Blue Fast"
+                        android:textColor="@color/dark_color"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginBottom="-10sp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Umum"
+                        android:textColor="@color/gray_color"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/rate"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    />
+
+            </RelativeLayout>
+            <!--  End of Header Section  -->
+
+            <!--  Room Specs Section  -->
+            <LinearLayout
+                android:layout_marginTop="20sp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginBottom="-10sp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:text="Room Specs"
+                    android:textColor="@color/dark_color"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_marginTop="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="10sp"
+                    >
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_bath"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinsmedium"
+                                android:text="3"
+                                android:textColor="@color/dark_color"
+                                android:textSize="20sp"
+                                android:gravity="center"
+                                android:layout_marginLeft="15sp"
+                                />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="Bathroom"
+                            android:textColor="@color/gray_color"
+                            android:textSize="14sp"
+                            android:layout_marginTop="-5sp"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="30sp"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_bed"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinsmedium"
+                                android:text="2"
+                                android:textColor="@color/dark_color"
+                                android:textSize="20sp"
+                                android:gravity="center"
+                                android:layout_marginLeft="15sp"
+                                />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="Master Bed"
+                            android:textColor="@color/gray_color"
+                            android:textSize="14sp"
+                            android:layout_marginTop="-5sp"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="30sp"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_bar"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinsmedium"
+                                android:text="1"
+                                android:textColor="@color/dark_color"
+                                android:textSize="20sp"
+                                android:gravity="center"
+                                android:layout_marginLeft="15sp"
+                                />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="Kitchen"
+                            android:textColor="@color/gray_color"
+                            android:textSize="14sp"
+                            android:layout_marginTop="-5sp"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--  End of Room Specs Section  -->
+
+            <!--  Happy Tenant Section  -->
+            <LinearLayout
+                android:layout_marginTop="20sp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginBottom="-10sp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:text="Happy Tenant"
+                    android:textColor="@color/dark_color"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_marginTop="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="10sp"
+                    >
+
+                    <RelativeLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <LinearLayout
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_user_1" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="10sp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppinsmedium"
+                                    android:text="Aken Tell"
+                                    android:textColor="@color/dark_color"
+                                    android:textSize="16sp"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppinsregular"
+                                    android:text="Feels like at home"
+                                    android:textColor="@color/gray_color"
+                                    android:textSize="14sp"
+                                    />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinsmedium"
+                                android:text="5/5"
+                                android:textColor="@color/dark_color"
+                                android:textSize="14sp"
+                                />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_star"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="-5sp"
+                                android:layout_marginLeft="7sp"
+                                />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10sp"
+                        >
+
+                        <LinearLayout
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_user_22" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="10sp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppinsmedium"
+                                    android:text="Masayoshi"
+                                    android:textColor="@color/dark_color"
+                                    android:textSize="16sp"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppinsregular"
+                                    android:text="Cozy for Freelancer"
+                                    android:textColor="@color/gray_color"
+                                    android:textSize="14sp"
+                                    />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinsmedium"
+                                android:text="4/5"
+                                android:textColor="@color/dark_color"
+                                android:textSize="14sp"
+                                />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_star"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="-5sp"
+                                android:layout_marginLeft="7sp"
+                                />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <!--  End of Happy Tenant Section  -->
+
+        </LinearLayout>
+        <!--  End of Info Section  -->
+
+    </ScrollView>
 
     <!--  Button Booking Section  -->
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_color"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingVertical="5sp"
+            android:paddingHorizontal="30sp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="$1,355"
+                android:textColor="@color/dark_color"
+                android:textSize="23sp"
+                android:layout_marginTop="7sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:text="/month"
+                android:textColor="@color/gray_color"
+                android:textSize="16sp"
+                android:layout_marginTop="-5sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:background="@color/btn_color"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="50sp"
+            android:paddingVertical="20sp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Booking Now"
+                android:textColor="@color/white_color"
+                android:textSize="24sp"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
     <!--  End of Button Booking Section  -->
 
 </RelativeLayout>
