@@ -5,10 +5,85 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bg_color"
     tools:context=".MainActivity"
     >
 
     <!--  Header Section  -->
+    <RelativeLayout
+        android:id="@+id/header_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="25sp"
+        android:paddingTop="30sp"
+        >
+
+        <!--  Menu and Greeting  -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            >
+
+            <!--  Icon Menu and Its Badge  -->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5sp"
+                >
+
+                <!--  Icon Menu  -->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_menu" />
+
+            </RelativeLayout>
+
+            <!--  Greeting  -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--  Hello  -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hello,"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textColor="@color/dark_color"
+                    android:textSize="24sp"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginBottom="-10sp"
+                    />
+
+                <!--  Name  -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Farhan Ghifary"
+                    android:fontFamily="@font/poppinsbold"
+                    android:textColor="@color/dark_color"
+                    android:textSize="24sp"
+                    android:layout_marginLeft="10sp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--  Profile Picture  -->
+        <ImageView
+            android:id="@+id/user_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5sp"
+            android:src="@drawable/user_pic" />
+
+    </RelativeLayout>
     <!--  End of Header Section  -->
 
     <!--  Search Bar Section  -->
