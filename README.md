@@ -12,6 +12,6 @@
 
 ### Mockup
 <div style="display: flex">
-  <img src="https://i.postimg.cc/pVqQjRpk/Screenshot-20220823-220559.png" width="230" />
-  <img src="https://i.postimg.cc/j2FZ4bdW/Screenshot-20220823-220647.png" width="230" />
+  <img src="https://i.postimg.cc/xdjLx2Y1/Screenshot-20220825-000704.png" width="230" />
+  <img src="https://i.postimg.cc/2Skqm7tH/Screenshot-20220825-000755.png" width="230" />
 </div>
