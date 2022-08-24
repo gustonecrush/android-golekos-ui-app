@@ -126,6 +126,67 @@
     <!--  End of Search Bar Section  -->
 
     <!--  Banner Section  -->
+    <RelativeLayout
+        android:id="@+id/banner_section"
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+        android:background="@drawable/gradient"
+        android:layout_below="@id/search_bar_section"
+        android:layout_marginTop="25sp"
+        android:layout_marginHorizontal="25sp"
+        >
+
+        <!--  Icon  -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_banner"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            />
+
+        <!--  Text  -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20sp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment Safety"
+                android:fontFamily="@font/poppinsmedium"
+                android:textSize="16sp"
+                android:textColor="@color/white_color"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kindly only use our official card"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="12sp"
+                android:textColor="@color/white_color"
+                />
+
+        </LinearLayout>
+
+        <!--  Decoration  -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/decor"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            />
+
+    </RelativeLayout>
     <!--  End of Banner Section  -->
 
     <!--  Must People Go Section  -->
