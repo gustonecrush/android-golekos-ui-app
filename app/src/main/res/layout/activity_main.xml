@@ -9,190 +9,656 @@
     tools:context=".MainActivity"
     >
 
-    <!--  Header Section  -->
-    <RelativeLayout
-        android:id="@+id/header_section"
+    <ScrollView
+        android:id="@+id/scrolled_section"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="25sp"
-        android:paddingTop="40sp"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:layout_marginBottom="80sp"
         >
 
-        <!--  Menu and Greeting  -->
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            >
+        <RelativeLayout
+            android:id="@+id/container_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-            <!--  Icon Menu and Its Badge  -->
+            <!--  Header Section  -->
             <RelativeLayout
-                android:layout_width="wrap_content"
+                android:id="@+id/header_section"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5sp"
+                android:paddingHorizontal="25sp"
+                android:paddingTop="40sp">
+
+                <!--  Menu and Greeting  -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:orientation="horizontal">
+
+                    <!--  Icon Menu and Its Badge  -->
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp">
+
+                        <!--  Icon Menu  -->
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_menu" />
+
+                            <LinearLayout
+                                android:layout_width="10sp"
+                                android:layout_height="10sp"
+                                android:layout_marginLeft="15sp"
+                                android:background="@drawable/circle"
+                                android:backgroundTint="@color/btn_color"></LinearLayout>
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                    <!--  Greeting  -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!--  Hello  -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10sp"
+                            android:layout_marginBottom="-10sp"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="Hello,"
+                            android:textColor="@color/dark_color"
+                            android:textSize="24sp" />
+
+                        <!--  Name  -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10sp"
+                            android:fontFamily="@font/poppinsbold"
+                            android:text="Farhan Ghifary"
+                            android:textColor="@color/dark_color"
+                            android:textSize="24sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--  Profile Picture  -->
+                <ImageView
+                    android:id="@+id/user_pic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="5sp"
+                    android:src="@drawable/user_pic" />
+
+            </RelativeLayout>
+            <!--  End of Header Section  -->
+
+            <!--  Search Bar Section  -->
+            <RelativeLayout
+                android:id="@+id/search_bar_section"
+                android:layout_below="@id/header_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25sp"
+                android:padding="15sp"
+                android:background="@drawable/radius_sm"
+                android:backgroundTint="@color/white_color"
+                android:layout_marginTop="20sp"
                 >
 
-                <!--  Icon Menu  -->
+                <!--  Text Edit  -->
+                <EditText
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Find your next home"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textColor="@color/dark_color"
+                    android:textSize="16sp"
+                    android:textColorHint="@color/gray_color"
+                    android:background="@color/white_color"
+                    android:layout_centerVertical="true"
+                    />
+
+                <!--  Icon  -->
+                <ImageView
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_search"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+            <!--  End of Search Bar Section  -->
+
+            <!--  Banner Section  -->
+            <RelativeLayout
+                android:id="@+id/banner_section"
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:background="@drawable/gradient"
+                android:layout_below="@id/search_bar_section"
+                android:layout_marginTop="25sp"
+                android:layout_marginHorizontal="25sp"
+                >
+
+                <!--  Icon  -->
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_menu" />
+                    android:src="@drawable/ic_banner"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginRight="20sp"
+                    />
+
+                <!--  Text  -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20sp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="80sp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Payment Safety"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:textSize="16sp"
+                        android:textColor="@color/white_color"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kindly only use our official card"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textSize="12sp"
+                        android:textColor="@color/white_color"
+                        />
+
+                </LinearLayout>
+
+                <!--  Decoration  -->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/decor"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    />
 
             </RelativeLayout>
+            <!--  End of Banner Section  -->
 
-            <!--  Greeting  -->
-            <LinearLayout
-                android:layout_width="wrap_content"
+            <!--  Must People Go Section  -->
+            <RelativeLayout
+                android:id="@+id/must_go_section"
+                android:layout_below="@id/banner_section"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_marginHorizontal="25sp"
+                android:layout_marginTop="25sp"
+                >
 
-                <!--  Hello  -->
+                <!--  Header  -->
                 <TextView
+                    android:id="@+id/header_must_people_go"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Hello,"
-                    android:fontFamily="@font/poppinsregular"
+                    android:text="Must People Go"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textSize="18sp"
                     android:textColor="@color/dark_color"
-                    android:textSize="24sp"
-                    android:layout_marginLeft="10sp"
-                    android:layout_marginBottom="-10sp"
                     />
 
-                <!--  Name  -->
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Farhan Ghifary"
-                    android:fontFamily="@font/poppinsbold"
-                    android:textColor="@color/dark_color"
-                    android:textSize="24sp"
-                    android:layout_marginLeft="10sp"
-                    />
+                    android:layout_below="@id/header_must_people_go"
+                    android:background="@drawable/radius_sm"
+                    android:backgroundTint="@color/white_color"
+                    android:layout_marginTop="20sp"
+                    android:orientation="vertical"
+                    android:paddingVertical="15sp"
+                    >
 
-            </LinearLayout>
+                    <RelativeLayout
+                        android:id="@+id/content_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingVertical="15sp"
+                        android:paddingHorizontal="20sp"
+                        >
 
-        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_centerVertical="true"
+                            >
 
-        <!--  Profile Picture  -->
-        <ImageView
-            android:id="@+id/user_pic"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="5sp"
-            android:src="@drawable/user_pic" />
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/pic_1"
+                                android:layout_marginRight="20sp"
+                                />
 
-    </RelativeLayout>
-    <!--  End of Header Section  -->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginTop="6sp"
+                                >
 
-    <!--  Search Bar Section  -->
-    <RelativeLayout
-        android:id="@+id/search_bar_section"
-        android:layout_below="@id/header_section"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="25sp"
-        android:padding="15sp"
-        android:background="@drawable/radius_sm"
-        android:backgroundTint="@color/white_color"
-        android:layout_marginTop="20sp"
-        >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Fukko Cozy"
+                                    android:fontFamily="@font/poppinsmedium"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/dark_color"
+                                    />
 
-        <!--  Text Edit  -->
-        <EditText
-            android:layout_alignParentLeft="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Find your next home"
-            android:fontFamily="@font/poppinsregular"
-            android:textColor="@color/dark_color"
-            android:textSize="16sp"
-            android:textColorHint="@color/gray_color"
-            android:background="@color/white_color"
-            android:layout_centerVertical="true"
-            />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Wanita"
+                                    android:fontFamily="@font/poppinsregular"
+                                    android:textSize="13sp"
+                                    android:textColor="@color/gray_color"
+                                    />
 
-        <!--  Icon  -->
-        <ImageView
-            android:layout_alignParentRight="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_search"
-            android:layout_centerVertical="true"
-            />
+                            </LinearLayout>
 
-    </RelativeLayout>
-    <!--  End of Search Bar Section  -->
+                        </LinearLayout>
 
-    <!--  Banner Section  -->
-    <RelativeLayout
-        android:id="@+id/banner_section"
-        android:layout_width="match_parent"
-        android:layout_height="100sp"
-        android:background="@drawable/gradient"
-        android:layout_below="@id/search_bar_section"
-        android:layout_marginTop="25sp"
-        android:layout_marginHorizontal="25sp"
-        >
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_alignParentRight="true"
+                            android:textAlignment="textEnd"
+                            android:layout_marginTop="6sp"
+                            >
 
-        <!--  Icon  -->
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_banner"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="20sp"
-            android:layout_marginRight="20sp"
-            />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="$55"
+                                android:fontFamily="@font/poppinsmedium"
+                                android:textSize="16sp"
+                                android:textColor="@color/dark_color"
+                                android:textAlignment="textEnd"
+                                android:layout_marginLeft="20sp"
+                                />
 
-        <!--  Text  -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="20sp"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="/month"
+                                android:fontFamily="@font/poppinsregular"
+                                android:textSize="13sp"
+                                android:textColor="@color/gray_color"
+                                />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Payment Safety"
-                android:fontFamily="@font/poppinsmedium"
-                android:textSize="16sp"
-                android:textColor="@color/white_color"
-                />
+                        </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Kindly only use our official card"
-                android:fontFamily="@font/poppinsregular"
-                android:textSize="12sp"
-                android:textColor="@color/white_color"
-                />
+                    </RelativeLayout>
 
-        </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0.2sp"
+                        android:background="#E2E5E6"
+                        ></LinearLayout>
 
-        <!--  Decoration  -->
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/decor"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            />
+                    <RelativeLayout
+                        android:id="@+id/content_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingVertical="15sp"
+                        android:paddingHorizontal="20sp"
+                        >
 
-    </RelativeLayout>
-    <!--  End of Banner Section  -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_centerVertical="true"
+                            >
 
-    <!--  Must People Go Section  -->
-    <!--  End of Must People Go Section  -->
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/pic_2"
+                                android:layout_marginRight="20sp"
+                                />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginTop="6sp"
+                                >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Blue Fast"
+                                    android:fontFamily="@font/poppinsmedium"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/dark_color"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Umum"
+                                    android:fontFamily="@font/poppinsregular"
+                                    android:textSize="13sp"
+                                    android:textColor="@color/gray_color"
+                                    />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_alignParentRight="true"
+                            android:textAlignment="textEnd"
+                            android:layout_marginTop="6sp"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="$21"
+                                android:fontFamily="@font/poppinsmedium"
+                                android:textSize="16sp"
+                                android:textColor="@color/dark_color"
+                                android:textAlignment="textEnd"
+                                android:layout_marginLeft="20sp"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="/month"
+                                android:fontFamily="@font/poppinsregular"
+                                android:textSize="13sp"
+                                android:textColor="@color/gray_color"
+                                />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0.2sp"
+                        android:background="#E2E5E6"
+                        ></LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/content_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingVertical="15sp"
+                        android:paddingHorizontal="20sp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_centerVertical="true"
+                            >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/pic_3"
+                                android:layout_marginRight="20sp"
+                                />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginTop="6sp"
+                                >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Jamaixa IIX"
+                                    android:fontFamily="@font/poppinsmedium"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/dark_color"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Pria"
+                                    android:fontFamily="@font/poppinsregular"
+                                    android:textSize="13sp"
+                                    android:textColor="@color/gray_color"
+                                    />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_alignParentRight="true"
+                            android:textAlignment="textEnd"
+                            android:layout_marginTop="6sp"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="$49"
+                                android:fontFamily="@font/poppinsmedium"
+                                android:textSize="16sp"
+                                android:textColor="@color/dark_color"
+                                android:textAlignment="textEnd"
+                                android:layout_marginLeft="20sp"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="/month"
+                                android:fontFamily="@font/poppinsregular"
+                                android:textSize="13sp"
+                                android:textColor="@color/gray_color"
+                                />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0.2sp"
+                        android:background="#E2E5E6"
+                        ></LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/content_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingVertical="15sp"
+                        android:paddingHorizontal="20sp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20sp"
+                                android:src="@drawable/pic_4" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6sp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppinsmedium"
+                                    android:text="Yaka Past"
+                                    android:textColor="@color/dark_color"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppinsregular"
+                                    android:text="Umum"
+                                    android:textColor="@color/gray_color"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_alignParentRight="true"
+                            android:textAlignment="textEnd"
+                            android:layout_marginTop="6sp"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="$82"
+                                android:fontFamily="@font/poppinsmedium"
+                                android:textSize="16sp"
+                                android:textColor="@color/dark_color"
+                                android:textAlignment="textEnd"
+                                android:layout_marginLeft="20sp"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="/month"
+                                android:fontFamily="@font/poppinsregular"
+                                android:textSize="13sp"
+                                android:textColor="@color/gray_color"
+                                />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+            <!--  End of Must People Go Section  -->
+
+        </RelativeLayout>
+
+    </ScrollView>
 
     <!--  Bottom Navigator Section  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white_color"
+        android:paddingHorizontal="25sp"
+        android:paddingVertical="20sp"
+        >
+
+        <ImageView
+            android:layout_width="35sp"
+            android:layout_height="35sp"
+            android:src="@drawable/ic_home"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="10sp"
+            />
+
+        <ImageView
+            android:layout_width="35sp"
+            android:layout_height="35sp"
+            android:src="@drawable/ic_heart"
+            android:layout_marginHorizontal="20sp"
+            />
+
+        <ImageView
+            android:layout_width="35sp"
+            android:layout_height="35sp"
+            android:src="@drawable/ic_filter"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="20sp"
+            />
+
+        <ImageView
+            android:layout_width="35sp"
+            android:layout_height="35sp"
+            android:src="@drawable/ic_language"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="20sp"
+            />
+
+        <ImageView
+            android:layout_width="35sp"
+            android:layout_height="35sp"
+            android:src="@drawable/ic_user_solid"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="20sp"
+            />
+
+    </LinearLayout>
     <!--  End of Bottom Navigator Section  -->
 
 </RelativeLayout>

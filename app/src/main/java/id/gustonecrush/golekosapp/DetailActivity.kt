@@ -9,5 +9,12 @@ class DetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detail)
 
         supportActionBar?.hide()
+
+        backBtnListener()
     }
+
+    private fun backBtnListener() {
+
+    }
+
 }
