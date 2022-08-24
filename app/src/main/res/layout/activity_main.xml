@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingHorizontal="25sp"
-        android:paddingTop="30sp"
+        android:paddingTop="40sp"
         >
 
         <!--  Menu and Greeting  -->
@@ -87,6 +87,42 @@
     <!--  End of Header Section  -->
 
     <!--  Search Bar Section  -->
+    <RelativeLayout
+        android:id="@+id/search_bar_section"
+        android:layout_below="@id/header_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25sp"
+        android:padding="15sp"
+        android:background="@drawable/radius_sm"
+        android:backgroundTint="@color/white_color"
+        android:layout_marginTop="20sp"
+        >
+
+        <!--  Text Edit  -->
+        <EditText
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Find your next home"
+            android:fontFamily="@font/poppinsregular"
+            android:textColor="@color/dark_color"
+            android:textSize="16sp"
+            android:textColorHint="@color/gray_color"
+            android:background="@color/white_color"
+            android:layout_centerVertical="true"
+            />
+
+        <!--  Icon  -->
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_search"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
     <!--  End of Search Bar Section  -->
 
     <!--  Banner Section  -->
